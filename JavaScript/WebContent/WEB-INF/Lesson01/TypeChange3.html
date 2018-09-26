@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>불 자료형 변환</title>
+</head>
+<body>
+<script>
+alert(Boolean(0));
+alert(Boolean(NaN));
+alert(Boolean(''));
+alert(Boolean(null));
+alert(Boolean(undefined));
+
+//다섯 가지 모두가 false로 변환
+//문자열 '0'과 'false'는 문자열이므로 true
+
+
+alert(!!0);
+alert(!!NaN);
+alert(!!'');
+alert(!!null);
+alert(!!undefined);
+//undefinded 자료형은 false
+
+//비교 연산자의 활용
+alert('' == false);
+alert('' == 0);
+alert(0 == false);
+alert('273' == 273);
+//4가지 모두 true 출력
+
+//일치 연산자 
+//=== -> 양변의 자료형과 값이 일치합니다.
+//!== -> 양변의 자료형과 값이 다릅니다.
+
+alert('' === false);
+</script>
+</body>
+</html>
