@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>함수를 사용한 객체 생성</title>
+</head>
+<body>
+<script type="text/javascript">
+function makeStudnet(nane, korean, math, english, science){
+	var willReturn ={
+			// 속성
+			이름: name,
+			국어: korean,
+			수학: math,
+			영어: english,
+			과학: science,
+			
+			//메서드
+			getSum: fuction(){
+				return this.국어 + this.수학 + this.영어 + this.과학;
+			},
+			getAverage: function(){
+				return this.getSum()/4;
+			},
+			toString: fuction(){
+				return this.이름 + '\t' + this.getSum() + '\t' + this.getAverage();
+			}
+	};
+	return willReturn;
+}
+
+//학생 정보 배열을 만듭니다.
+var students =[];
+students.push(makeStudent('윤인성', 87,98,88,95));
+students.push(makeStudent('연하진', 82,95,88,95));
+students.push(makeStudent('구지연', 87,98,81,95));
+students.push(makeStudent('나선준', 87,94,82,95));
+students.push(makeStudent('윤아린', 87,91,88,95));
+
+//출력합니다.
+var output = '이름\t총점\t평균\n';
+for(var i in students){
+	output += students[i].toString() + '\n';
+}
+alert(output);
+</script>
+</body>
+</html>

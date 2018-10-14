@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>객체와 배열을 사용한 데이터 관리</title>
+</head>
+<body>
+<script>
+//학생 정보 배열을 만듭니다.
+var students = [];
+students.push({이름: '윤인성', 국어: 87, 수학:98, 영어:88, 과학:95});
+students.push({이름: '연하진', 국어: 92, 수학:98, 영어:96, 과학:98});
+students.push({이름: '구지연', 국어: 88, 수학:92, 영어:94, 과학:90});
+students.push({이름: '나선주', 국어: 81, 수학:93, 영어:82, 과학:97});
+students.push({이름: '윤아린', 국어: 87, 수학:99, 영어:79, 과학:93});
+
+//모든 students 배열 내의 객체에 메소드를 추가합니다.
+for(var i int students){
+	//총점을 구하는 메서드를 추가합니다.
+	students[i].getSum = function(){
+		return this.국어 + this.수학 + this.영어 + this.과학;
+	};
+	
+	//평균을 구하는 메서드 추가
+	students[i].getAverage = fuction(){
+		return this.getSum()/4;
+	};
+	
+}
+</script>
+</body>
+</html>
